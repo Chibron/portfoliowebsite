@@ -1,0 +1,280 @@
+:root {
+  --text-color: #2b2b2b;
+  --primary-color: #f0f8ff;
+  --main-color: #357b70; 
+  --link-color: var(--main-color); 
+  --visited-link-color: #8b008b;
+  --secondary-color: #e0b354; 
+  --hover-focus-link-color: var(--secondary-color); 
+  --active-link-color: #489c79;
+  --button-bg: var(--main-color); 
+  --button-secondary-bg: var(--secondary-color); 
+  --button-secondary-text: var(--text-color); 
+  --grid-item-bg: lightgray;
+  --font-family: 'Roboto';
+  --font-weight-normal: 400;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+  --default-padding: 10px;
+  --border-radius-small: 5px;
+  --nav-item-spacing: 10px;
+  --grid-wrapper-padding: 20px;
+  --grid-gap: 15px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-base);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: var(--line-height-base);
+}
+
+.navigation-list__item--active {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.5;
+  font-style: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+a:link {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--visited-link-color);
+}
+
+a:hover,
+a:focus {
+  color: var(--hover-focus-link-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:active {
+  color: var(--active-link-color);
+}
+
+/* Shared button styles for <button> and <a class="button"> */
+button,
+a.button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--button-bg);
+  color: white;
+  text-decoration: none;
+  padding: var(--default-padding); /* Using variable */
+  border-radius: var(--border-radius-small); /* Using variable */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s, transform 0.3s ease;
+}
+
+/* Hover and focus states for both <button> and <a class="button"> */
+button:hover,
+button:focus,
+a.button:hover,
+a.button:focus {
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Outline for accessibility */
+button:focus,
+a.button:focus {
+  outline: 2px dashed var(--link-color);
+  outline-offset: 2px;
+}
+
+/* Secondary button variant */
+.button__secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+}
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile__portrait {
+  float: left;
+  margin-right: 20px;
+  width: 200px;
+  height: auto;
+  min-width: 150px;
+  max-width: 280px;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--default-padding); /* Using variable */
+  width: 98%;
+}
+
+.page-header__logo {
+  flex: 1;
+  padding: var(--default-padding); /* Using variable */
+}
+
+.main-navigation {
+  display: flex;
+  margin-left: var(--nav-item-spacing); /* Using variable */
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: var(--nav-item-spacing); /* Using variable */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--grid-gap); /* Using variable */
+  padding: var(--grid-wrapper-padding); /* Using variable */
+  justify-items: center;
+  align-items: center;
+}
+
+.grid__item {
+  background-color: var(--grid-item-bg);
+  border-radius: var(--border-radius-small); /* Using variable */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: var(--default-padding); /* Using variable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@keyframes color-change {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  will-change: fill;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+/* Table styles */
+table {
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-bottom: 20px; 
+}
+
+th, td {
+  padding: var(--default-padding); 
+  border: 1px solid #ddd; 
+  text-align: left; 
+}
+
+th {
+  background-color: #f2f2f2; 
+}
