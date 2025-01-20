@@ -50,6 +50,7 @@ html {
   p {
     font-size: 16px;
     line-height: 1.2;
+    text-align: justify;
   }
   
   a:link {
@@ -184,8 +185,8 @@ html {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    padding: 5px; /* Using variable */
-    max-width: 80%;
+    padding: 3px; /* Using variable */
+    max-width: 90%;
   }
   
   .main-navigation {
