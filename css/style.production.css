@@ -400,7 +400,7 @@ html {
   .social-media {
     display: flex; /* Use flexbox for better control */
     justify-content: center; /* Center the icons horizontally */
-    border-radius: 5%;
+    border-radius: 5px;
   }
   
   .social-media a {
