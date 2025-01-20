@@ -7,8 +7,8 @@ html {
   :root {
     --text-color: #fff; /* Change text color to white */
     --primary-color: #f0f8ff; 
-    --link-color: #357b70; 
-    --visited-link-color: #8b008b; 
+    --link-color: #8A8AFF; 
+    --visited-link-color: #D100D1; 
     --hover-focus-link-color: #e0b354; 
     --active-link-color: #489c79; 
     --button-bg: #357b70; 
