@@ -396,6 +396,6 @@ html {
     background-color: #575757; 
   }
 
-  .social-media {
-    padding: 5px;
+  .social-media a {
+    margin-right: 10px;
   }
