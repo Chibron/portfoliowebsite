@@ -396,6 +396,11 @@ html {
     background-color: #575757; 
   }
 
+  .social-media {
+    display: flex; /* Use flexbox for better control */
+    justify-content: center; /* Center the icons horizontally */
+  }
+  
   .social-media a {
-    margin-right: 10px;
+    margin: 0 10px; /* Add margin to the left and right of each icon */
   }
