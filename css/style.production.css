@@ -217,7 +217,7 @@ html {
   }
   
   .grid__item {
-    background-color: lightgray;
+    background-color: rgb(58, 58, 58);
     border-radius: 5px; /* Using variable */
     -webkit-box-shadow: 0px 4px 6px rgba(202, 202, 202, 0.1);
             box-shadow: 0px 4px 6px rgba(202, 202, 202, 0.1);
