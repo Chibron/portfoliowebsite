@@ -150,7 +150,7 @@ html {
     max-width: 280px;
     -o-object-fit: cover;
        object-fit: cover;
-    border-radius: 5%;
+    border-radius: 15%;
   }
   
   .page-footer {
@@ -185,7 +185,7 @@ html {
         -ms-flex: 1;
             flex: 1;
     padding: 5px; /* Using variable */
-    max-width: 70%;
+    max-width: 80%;
   }
   
   .main-navigation {
@@ -382,7 +382,7 @@ html {
   
   th {
     padding: 10px; 
-    border: 3px solid #ddd; 
+    border: 2px solid #ddd; 
     text-align: left; 
   }
   
