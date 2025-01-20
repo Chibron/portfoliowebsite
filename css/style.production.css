@@ -4,12 +4,34 @@ html {
     scroll-behavior: smooth;
   }
   
+  :root {
+    --text-color: #fff; /* Change text color to white */
+    --primary-color: #f0f8ff; 
+    --link-color: #357b70; 
+    --visited-link-color: #8b008b; 
+    --hover-focus-link-color: #e0b354; 
+    --active-link-color: #489c79; 
+    --button-bg: #357b70; 
+    --button-secondary-bg: #e0b354; 
+    --button-secondary-text: #fff; /* Change button secondary text color to white */
+    --grid-item-bg: #333; /* Change grid item background to a darker gray */
+    --font-family: 'Roboto';
+    --font-weight-normal: 400;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+    --default-padding: 10px;
+    --border-radius-small: 5px;
+    --nav-item-spacing: 10px;
+    --grid-wrapper-padding: 20px;
+    --grid-gap: 15px;
+  }
+  
   body {
     font-family: 'Roboto';
     font-weight: 400;
     font-size: 16px;
-    background-color: #f0f8ff;
-    color: #2b2b2b;
+    background-color: #000; /* Set background color to black */
+    color: var(--text-color); /* Use the white text color variable */
     line-height: 1.6;
     padding-bottom: 30px;
   }
