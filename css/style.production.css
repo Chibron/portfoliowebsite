@@ -10,7 +10,7 @@ html {
     --link-color: #8A8AFF; 
     --visited-link-color: #D100D1; 
     --hover-focus-link-color: #e0b354; 
-    --active-link-color: #489c79; 
+    --active-link-color: #58b08b; 
     --button-bg: #357b70; 
     --button-secondary-bg: #e0b354; 
     --button-secondary-text: #fff; /* Change button secondary text color to white */
@@ -53,7 +53,7 @@ html {
   }
   
   a:link {
-    color: #357b70;
+    color: #58b08b;
   }
   
   a:visited {
