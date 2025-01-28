@@ -56,27 +56,44 @@
         </ul>
       </nav>
     </header>
-    <div class="profile">
+    <div class="contact-section">
       Contact info
       <a href="mailto:axel.gibo.pro@gmail.com">axel.gibo.pro@gmail.com</a><br />
       Phone <a href="tel:+493048492016">+49 172 295 7339</a><br />
       <a href="mailto:axel.gibo.pro@gmail.com">Reach out to me</a><br />
       <form action="current-page.php" method="post" id="contact-form">
-        <label class="standard-label" for="contact-email">Email:</label>
-        <input type="email" id="contact-email" name="email" required /><br />
+        <div class="form-group">
+          <label class="standard-label" for="contact-email">Email:</label>
+          <input
+            type="email"
+            id="contact-email"
+            name="email"
+            required
+            placeholder="Check for typos"
+          />
+        </div>
 
-        <label class="standard-label" for="contact-phone">Telephone:</label>
-        <input type="tel" id="contact-phone" name="telephone" /><br />
+        <div class="form-group">
+          <label class="standard-label" for="contact-phone">Phone</label>
+          <input
+            type="tel"
+            id="contact-phone"
+            name="telephone"
+            placeholder="Optional"
+          />
+        </div>
 
-        <label class="standard-label" for="contact-message">Message:</label>
-        <textarea
-          id="contact-message"
-          name="message"
-          required
-          maxlength="480"
-        ></textarea>
+        <div class="form-group">
+          <label class="standard-label" for="contact-message">Message:</label>
+          <textarea
+            id="contact-message"
+            name="message"
+            required
+            maxlength="480"
+          ></textarea>
+        </div>
 
-        <input type="submit" value="Send" />
+        <div class="form-group"><input type="submit" value="Send" /></div>
       </form>
     </div>
     <footer class="page-footer">

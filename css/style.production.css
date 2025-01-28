@@ -34,6 +34,8 @@ html {
     color: var(--text-color); /* Use the white text color variable */
     line-height: 1.6;
     padding: 10px;
+    background-image: url("img/hexpattern.png");
+    background-repeat: repeat;
   }
 
   a {
@@ -143,7 +145,7 @@ html {
   }
   
   .profile {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
   }
   
@@ -426,3 +428,70 @@ html {
     color: #fff;
     font-weight: 600;
   }
+
+  .works-heading-container {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    width: 100%; /* Ensures the container takes full width */
+    margin-bottom: 10px; /* Adds some bottom margin for spacing */
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.contact-section h3 {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.contact-section .contact-details {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-section .contact-details a {
+  color: #666;
+  text-decoration: none;
+}
+
+.contact-section .form-group {
+  margin-bottom: 15px;
+  width: 100%; /* Ensure form groups take full width */
+}
+
+.contact-section label {
+  display: block;
+  color: #eeeeee;
+  margin-bottom: 5px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #eee;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-section input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Button fills its parent */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
