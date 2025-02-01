@@ -31,11 +31,11 @@ html {
     font-weight: 400;
     font-size: 16px;
     background-color: #000; /* Set background color to black */
+    background: linear-gradient(to bottom, #000000 75%, #001f3f);
     color: var(--text-color); /* Use the white text color variable */
     line-height: 1.6;
-    padding: 10px;
-    background-image: url("img/hexpattern.png");
-    background-repeat: repeat;
+    padding: 0px;
+    min-height: 100vh;
   }
 
   a {
@@ -159,8 +159,17 @@ html {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 15%;
+    transition: opacity 1s;
   }
   
+  .profile__portrait:hover {
+    opacity: 0.5; /* 50% opacity on hover */
+}
+
+.profile__portrait:not(:hover) { /* Added to handle the transition back */
+    opacity: 1; /* 100% opacity when not hovered */
+}
+
   .page-footer {
     clear: both;
     display: -webkit-box;
@@ -225,7 +234,7 @@ html {
   }
   
   .grid__item {
-    background-color: rgb(32, 32, 32);
+    background-color: rgba(0, 0, 0, 0.482);
     border-radius: 5px; /* Using variable */
     -webkit-box-shadow: 0px 4px 6px rgba(202, 202, 202, 0.1);
             box-shadow: 0px 4px 6px rgba(202, 202, 202, 0.1);
@@ -391,7 +400,7 @@ html {
   
   /* Table styles */
   table {
-    width: 95%; 
+    width: 90%; 
     border-collapse: collapse; 
     margin-bottom: 20px; 
   }
@@ -444,7 +453,7 @@ html {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(180, 171, 171, 0.05);
   border-radius: 8px;
 }
 
@@ -459,7 +468,7 @@ html {
 }
 
 .contact-section .contact-details a {
-  color: #666;
+  color: #2e2e2e;
   text-decoration: none;
 }
 
@@ -486,7 +495,7 @@ html {
 }
 
 .contact-section input[type="submit"] {
-  background-color: #007bff;
+  background-color: #0065d1;
   color: white;
   padding: 10px 20px;
   border: none;
